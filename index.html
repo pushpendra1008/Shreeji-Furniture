@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shreeji Furniture</title>
+    <link rel="icon" href="logo.png" type="image/png" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --main-bg: #f8faf5;
+            --accent: #49a078;
+            --dark: #232931;
+            --light: #f4f4f6;
+            --wood:var(--main-bg)
+        }
+        @media only screen and (max-width: 600px) {
+            /* Adjust layout styles, font sizes, paddings, margins, and images for smaller screens */
+            
+            body {
+              font-size: 14px;
+              padding: 10px;
+            }
+            
+            /* Example: Make navigation menu vertical or toggleable */
+            nav {
+              display: block;
+            }
+            
+            /* Example: Responsive images */
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+            
+            /* Adjust furniture product grid to a single column */
+            .product-grid {
+              grid-template-columns: 1fr;
+            }
+            
+            /* Other adjustments as needed for headers, buttons, forms */
+          }
+          
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: var(--main-bg);
+            color: var(--dark);
+            background-image: url(https://i.pinimg.com/736x/78/fb/73/78fb7333062ff691f36a24a2f015c6b9.jpg);
+            background-size: cover;
+        }
+        header {
+            background: var(--accent);
+            color: #fff;
+            padding: 24px 0 16px 0;
+            text-align: center;
+            font-size: xx-large;
+        }
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.2em;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin: 0;
+        }
+        /* Navbar container */
+nav {
+    display: flex;
+    justify-content: center;  /* Centers the nav items */
+    align-items: center;      /* Vertically aligns them */
+    gap: 15px;                /* Space between items */
+    margin-top: 15px;
+    flex-wrap: wrap;          /* Makes it responsive */
+  }
+  
+  /* Navbar buttons */
+  nav a {
+    text-decoration: none;
+    background: #fff;
+    color: #2f855a;           /* Green text */
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect */
+  nav a:hover {
+    background: #2f855a;
+    color: #fff;
+  }
+       
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background: var(--wood);
+            border-radius: 18px;
+            max-width: 1150px;
+            margin: 36px auto 0 auto;
+            box-shadow: 0 6px 28px rgba(70,100,40,0.08);
+            overflow: hidden;
+        }
+        .hero-text {
+            flex: 1 1 340px;
+            padding: 2.8em 2em;
+        }
+        .hero-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1em;
+            color: var(--accent);
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--dark);
+        }
+        .hero img {
+            flex: 1 1 320px;
+            width: 100%;
+            max-width: 390px;
+            object-fit: cover;
+        }
+        .features {
+            max-width: 1150px;
+            margin: 2em auto;
+            padding: 0 1.2em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+        }
+        .feature-card {
+            background: #fff;
+            flex: 1 1 240px;
+            max-width: 300px;
+            border-radius: 12px;
+            padding: 1.4em 1em;
+            box-shadow: 0 3px 14px rgba(73,160,120,0.06);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-7px) scale(1.03);
+        }
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-top: 0;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.7em;
+        }
+        footer {
+            margin-top: 4em;
+            background: var(--accent);
+            color:white;
+            text-align: center;
+            padding: 1.1em 0;
+            font-size: 1rem;
+            border-radius: 16px 16px 0 0;
+        }
+        @media (max-width: 800px) {
+            .hero {
+                flex-direction: column;
+            }
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature-card {
+                max-width: 90vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+      
+
+     <h1><img src="logo.png" alt="Shreeji Furniture Logo" style="height: 50px; border: raidus 50px; ;" , /> Shreeji Furniture</h1>
+        <p>Your  Home , Our Craft</p>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h2>Premium Wooden Furniture</h2>
+            <p>Discover the warmth and elegance of handcrafted furniture for your dream home. From cozy chairs to spacious beds, Shreeji Furniture brings nature-inspired designs and timeless quality to every room.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80" alt="Wooden Furniture">
+    </div>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🪑</div>
+            <h3>Wide Range</h3>
+            <p>Chairs, tables, beds, storage, custom designs and more for every need.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🌿</div>
+            <h3>Eco-Friendly</h3>
+            <p>Responsibly sourced woods and finishes, crafted with care for the planet.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🛠️</div>
+            <h3>Custom Made</h3>
+            <p>Create furniture that matches your style and fits your space perfectly.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Quality Service</h3>
+            <p>Excellent after-sales service and on-time delivery for peace of mind.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Shreeji Furniture. All rights reserved.
+    </footer>
+</body>
+</html>

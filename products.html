@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shreeji Furniture - Product Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    @media only screen and (max-width: 600px) {
+      /* Adjust layout styles, font sizes, paddings, margins, and images for smaller screens */
+      
+    
+      
+      /* Example: Make navigation menu vertical or toggleable */
+      nav {
+        display: block;
+      }
+      
+      /* Example: Responsive images */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      /* Adjust furniture product grid to a single column */
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      /* Other adjustments as needed for headers, buttons, forms */
+    }
+    
+    body {
+      font-size: 14px;
+      padding: 10px;
+      margin: 0;
+      max-width: 100%;
+      background: linear-gradient(120deg, #f7fafc 60%, #eafbef 100%);
+      font-family: 'Montserrat', sans-serif;
+      color: #384e3c;
+      background-image: url(https://i.pinimg.com/736x/78/fb/73/78fb7333062ff691f36a24a2f015c6b9.jpg);
+    }
+    .back-btn {
+      border: none;
+      background: linear-gradient(90deg, #f7fafc, #eafbef);
+      color: #3a5e3c;
+     
+      font-size: 1.08rem;
+      font-weight: 600;
+      padding: 9px 21px;
+      margin-right: 22px;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .back-btn:hover {
+      background: linear-gradient(90deg, #cbd5e1, #8be0a3);
+      color: #245e3c;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 6px 24px rgba(34,34,34,0.09);
+      border-radius: 18px;
+      margin: 32px;
+    }
+    .brand {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #5bbd6b;
+      letter-spacing: 2px;
+    }
+   .filter-bar {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    .filter-bar select {
+      padding: 10px 18px;
+      border: 1px solid #ddd;
+      border-radius: 9px;
+      background: #eefbef;
+      font-size: 1rem;
+      transition: border 0.2s;
+    }
+    .filter-bar select:focus {
+      border-color: #5bbd6b;
+    }
+    .filter-bar button {
+      padding: 10px 28px;
+      background: linear-gradient(90deg, #5bbd6b, #b2f7c1);
+      border: none;
+      border-radius: 9px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.04rem;
+      transition: box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(91,189,107,0.16);
+    }
+    .filter-bar button:hover {
+      box-shadow: 0 6px 18px rgba(91,189,107,0.28);
+      background: linear-gradient(90deg, #48a259, #75eb9c);
+    }
+
+    .products-section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 50px auto;
+      padding: 24px;
+    }
+    
+    .products-title {
+      font-size: 2.2rem;
+      color: #3a5e3c;
+      margin-bottom: 32px;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+    
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 34px;
+    }
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 36px rgba(91,189,107,0.13);
+      padding: 22px 15px 32px 15px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 2px solid #eafbef;
+    }
+    .product-card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 16px 48px rgba(91,189,107,0.18);
+      border-color: #5bbd6b;
+    }
+    .product-image-bg, .product-image {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      background: #eafbef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-size: 3rem;
+      box-shadow: 0 4px 24px #eafbef60;
+      /* Remove fixed heights */
+    }
+    .product-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+    
+    .product-card h3 {
+      margin: 0.5em 0 0.3em 0;
+      font-size: 1.24rem;
+      color: #3a5e3c;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .product-card p {
+      font-size: 1.06rem;
+      color: #67996d;
+      margin: 10px 0 0 0;
+    }
+    .buy-btn {
+      margin-top: 18px;
+      padding: 9px 27px;
+      background: linear-gradient(90deg, #5bbd6b, #8fdaaa);
+      border: none;
+      border-radius: 9px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.06rem;
+      cursor: pointer;
+      transition: background 0.22s;
+      box-shadow: 0 2px 10px #8fdaaa80;
+    }
+    .buy-btn:hover {
+      background: linear-gradient(90deg, #3a5e3c, #aaf7c1);
+    }
+    @media only screen and (max-width: 700px) {
+      .navbar {
+        padding: 12px 6px;
+        margin: 14px;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .brand, .products-title {
+        font-size: 1.4rem;
+      }
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .product-image-bg, .product-image {
+        height: auto;
+        font-size: 2rem;
+        /* Remove fixed widths/heights */
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <button class="back-btn" onclick="window.history.back();"><a href="index.html" >
+      &#8592; Back</a>
+    </button>
+    <div class="brand">Shreeji Furniture</div>
+    <form class="filter-bar">
+      <select name="category">
+        <option value="">All Products</option>
+        <option value="tvunit">TV Unit</option>
+        <option value="kitchen">Kitchen</option>
+        <option value="bed">Bed</option>
+        <option value="sofa">Sofa</option>
+        <option value="wardrobe">Wardrobe</option>
+        <option value="Chair">Chair</option>
+        <option value="Shelves">Shelves</option>
+        <option value="Kids Furniture">Kids Furniture</option>
+        <option value="Dining Tabl">Dining Table</option>
+        <option value="Dressing Table">Dressing Table </option>
+        <option value="Kitchen Service Table">Kitchen Service Table</option>
+        <option value="Wooden partition">Wooden partition</option>
+      </select>
+      <button type="submit">Filter</button>
+    </form>
+  </nav>
+  <section class="products-section">
+    <div class="products-title">Discover Our Featured Furniture</div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-image-bg">
+          <img src="_ (6).jpeg" alt="TV Unit" class="product-img">
+        </div>
+        <h3>TV Unit</h3>
+        <p>Sleek stands with smart storage and style.</p>
+        <h3>₹64,999/-</h3>
+       <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image-bg">
+          <img src="WhatsApp Image 2025-09-24 at 15.00.36.jpeg" alt="Kitchen" class="product-img">
+        </div>
+        <h3>Kitchen</h3>
+        <p>Modular cabinets for trendy kitchens.</p>
+        <h3>₹75,499/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="WhatsApp Image 2025-09-24 at 15.02.08.jpeg" alt="BED" class="product-img">
+        </div>
+        <h3>Bed</h3>
+        <p>Comfortable beds with solid frames.</p>
+        <h3>₹51,890/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image-bg">
+          <img src="WhatsApp Image 2025-09-24 at 15.02.38.jpeg" alt="Kitchen" class="product-img">
+        </div>
+        <h3>Sofa</h3>
+        <p>Designer sofas for stylish living rooms.</p>
+        <h3>₹45,299/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+     <div class="product-card">
+        <div class="product-image-bg">
+          <img src="WhatsApp Image 2025-09-24 at 15.00.26.jpeg" alt="Kitchen" class="product-img">
+        </div>
+        <h3>Wardrobe</h3>
+        <p>Wide wardrobes for all your storage needs.</p>
+        <h3>₹67,000/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image-bg">
+          <img src="Japandi Chair Design_ Functional and Beautiful.jpeg" alt="Kitchen" class="product-img">
+        </div>
+        <h3>Chair</h3>
+        <p>Handcrafted wooden chairs for comfort & decor.</p>
+        <h3>₹10,999/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image-bg">
+          <img src="Floating Shelf Set Solid Wood Handmade Live Edge Wood Wall Shelf For Bookshelf Decor Rustic Home Accent Housewarming Gift.jpeg" alt="Kitchen" class="product-img">
+        </div>
+        <h3>Shelves</h3>
+        <p>Stylish shelves for modern storage.</p>
+        <h3>₹14,000/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image-bg">
+          <img src="c0bc0945eea01592fa01be14d4d16561.jpg" alt="Kitchen" class="product-img">
+        </div>
+        <h3>Kids Furniture</h3>
+        <p>Safe and vibrant furniture for kids’ rooms.</p>
+        <h3>₹49,000/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image-bg">
+          <img src="99d1dc56896d3de1251505b1c35462a5.jpg" alt="TV Unit" class="product-img">
+        </div>
+        <h3>Dining Table</h3>
+        <p>Gather around elegance – where every meal becomes a celebration.</p>
+        <h3>₹34,999/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image-bg">
+          <img src="8968ae1fed13bff4aed26c74f2dc2669.jpg" alt="TV Unit" class="product-img">
+        </div>
+        <h3>Dressing Table</h3>
+        <p>Reflect your style with timeless grace and wooden charm.</p>
+        <h3>₹40,000/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image-bg">
+          <img src="a29b0a0ad8ed7ca415e3902c7412fafe.jpg" alt="TV Unit" class="product-img">
+        </div>
+        <h3>Kitchen Service Table</h3>
+        <p>Function meets beauty – your kitchen’s perfect wooden companion</p>
+        <h3>₹39,999/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image-bg">
+          <img src="cfa192db57b62855d1092c6973c538d5.jpg" alt="TV Unit" class="product-img">
+        </div>
+        <h3>Wooden partition </h3>
+        <p>Divide spaces with warmth, style, and natural wooden beauty.</p>
+        <h3>₹35,000/-</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

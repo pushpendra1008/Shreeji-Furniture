@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us - Shreeji Furniture</title>
+  <style>
+    @media only screen and (max-width: 600px) {
+      /* Adjust layout styles, font sizes, paddings, margins, and images for smaller screens */
+      
+      body {
+        font-size: 14px;
+        padding: 10px;
+      }
+      
+      /* Example: Make navigation menu vertical or toggleable */
+      nav {
+        display: block;
+      }
+      
+      /* Example: Responsive images */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      /* Adjust furniture product grid to a single column */
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      /* Other adjustments as needed for headers, buttons, forms */
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #d9b382;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-image: url(https://i.pinimg.com/736x/78/fb/73/78fb7333062ff691f36a24a2f015c6b9.jpg);
+            background-size: cover;
+    }
+  
+  .back-btn {
+    border: none;
+    background: linear-gradient(90deg, #f7fafc, #eafbef);
+    color: #3a5e3c;
+    font-size: 1.08rem;
+    font-weight: 600;
+    padding: 9px 21px;
+    margin-right: 22px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .back-btn:hover {
+    background: linear-gradient(90deg, #cbd5e1, #8be0a3);
+    color: #245e3c;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 6px 24px rgba(34,34,34,0.09);
+    border-radius: 18px;
+    margin: 32px;
+  }
+  .brand {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #5bbd6b;
+    letter-spacing: 2px;
+  }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #EDE7DA;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #4CAF50;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      color: #4CAF50;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .founder-section {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .founder-section img {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .founder-section div {
+      max-width: 600px;
+    }
+    footer {
+      background-color: #49a078;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <button class="back-btn" onclick="window.history.back();"><a href="index.html" >
+      &#8592; Back</a>
+     
+    </button>
+    <div class="brand">About Us - Shreeji Furniture</div>
+  </nav>
+
+  <main>
+    <h1>Our Story</h1>
+    <p>Founded in 2010, Shreeji Furniture has been committed to crafting high-quality furniture that combines timeless design with durability. Our passion for woodworking and customer satisfaction drives us to deliver products that transform houses into homes.</p>
+
+    <h1>Our Mission</h1>
+    <p>We strive to provide elegant, affordable furniture that fits perfectly in every home. Sustainability and craftsmanship are at the heart of everything we do, ensuring that every piece adds value and comfort to your living space.</p>
+
+    <div class="founder-section">
+      <img src="IMG_3679 2.jpeg" alt="Founder" />
+      <div>
+        <h2>Meet the Founder</h2>
+        <p>Our founder, HiteshBhai Gajjar, brings over 20 years of experience in furniture design and manufacturing, blending traditional techniques with modern style to create unique pieces for our customers.</p>
+      </div>
+    </div>
+      <section class="about-us-contact">
+        <h2>About Shreeji Furniture</h2>
+        <p>At Shreeji Furniture, we bring timeless wooden craftsmanship to your home, combining quality, design, and comfort to elevate your living spaces.</p>
+        
+        <div class="contact-details">
+          <div>
+            <strong>Mobile:</strong> +91 74909 94646
+          </div>
+          <div>
+            <strong>Email:</strong> contact@shreejifurniture.com
+          </div>
+          <div>
+            <strong>Address:</strong> 11, Sudarshan Park, Bavla, Ahmedabad
+          </div>
+          <div class="social-icons">
+            <a href="https://instagram.com/shreejifurniture" target="_blank" aria-label="Instagram">
+              <img src="download.jpeg" alt="Instagram" />
+            </a>
+            <a href="https://facebook.com/shreejifurniture" target="_blank" aria-label="Facebook">
+              <img src="download (1).jpeg" alt="Facebook" />
+            </a>
+            <a href="https://twitter.com/shreejifurniture" target="_blank" aria-label="X (formerly Twitter)">
+              <img src="download (2).jpeg" alt="X (Twitter)" />
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <style>
+      .about-us-contact {
+        max-width: 700px;
+        margin: 60px auto;
+        font-family: 'Montserrat', sans-serif;
+        color: #3a5e3c;
+        text-align: center;
+        padding: 0 20px;
+      }
+      
+      .about-us-contact h2 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 18px;
+        letter-spacing: 1px;
+      }
+      
+      .about-us-contact p {
+        font-size: 1.15rem;
+        margin-bottom: 40px;
+        font-weight: 500;
+        line-height: 1.6;
+      }
+      
+      .contact-details div {
+        font-size: 1.1rem;
+        margin: 10px 0;
+      }
+      
+      .social-icons {
+        margin-top: 28px;
+      }
+      
+      .social-icons a {
+        display: inline-block;
+        margin: 0 14px;
+        width: 32px;
+        height: 32px;
+      }
+      
+      .social-icons img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: invert(30%) sepia(30%) saturate(500%) hue-rotate(80deg) brightness(85%) contrast(95%);
+        transition: filter 0.3s ease;
+      }
+      
+      .social-icons a:hover img {
+        filter: invert(62%) sepia(65%) saturate(468%) hue-rotate(92deg) brightness(120%) contrast(110%);
+      }
+      </style>
+      
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Shreeji Furniture. All rights reserved.
+  </footer>
+</body>
+</html>
